@@ -1,0 +1,68 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='author' content='Ashiq Dey, ashiqdey@gmail.com'>
+	<link rel="manifest" href="./manifest.json">
+	<title></title>
+	<style type="text/css">
+		body,html{color:#777;font-family:'segoe ui',arial;}
+		.warp{max-width:600px;margin:auto;text-align:center;}
+
+		button{padding:12px 20px;background:#0085ff;color:#fff;border:0;}
+			
+		@media all and (display-mode: standalone) {
+			button {background: #ddd;}
+		}
+	</style>
+</head>
+
+<body onload="addInit()">
+
+<div class="warp">
+	<h1>ADD TO HOME SCREEN</h1>
+	<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div><br><br>
+
+	<button onclick="install()">ADD</button>
+</div>
+
+
+<script>
+//let the user install pwa on clicking cutstom button
+function install(){
+	deferredPrompt.prompt();
+}
+
+//onload capture the beforeinstallprompt event
+function addInit(){
+		window.addEventListener('beforeinstallprompt', function(e){
+			console.log('beforeinstallprompt Event fired');
+
+			if(e.prompt){
+				//e.preventDefault();
+				window.deferredPrompt = e;
+				return false;
+			}
+		});
+}
+
+//service worker needed
+ if ('serviceWorker' in navigator) {
+    console.log("Will the service worker register?");
+    navigator.serviceWorker.register('service-worker.js')
+      .then(function(reg){
+        console.log("Yes, it did.");
+     }).catch(function(err) {
+        console.log("No it didn't. This happened:", err)
+    });
+ }
+</script>
+
+
+</body>
+</html>
