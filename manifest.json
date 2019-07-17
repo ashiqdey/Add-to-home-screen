@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "version": "0.2",
+  "short_name": "X Byte Lab",
+  "name": "X Byte Lab",
+  "theme_color": "#0085ff",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    }
+  ],
+  "start_url": "?source=pwa"
+}
