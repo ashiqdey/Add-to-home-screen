@@ -14,4 +14,5 @@ We can also check if user open the PWA form home screen icon by media query
 }
 
 
-:: I had succesfully compiled the project after lots of strugle and scratching on tons of website but of them taught me to achive the Install prompt on custom button click. Everyone tell how default mini info bar could be display no one teaches to show the prompt on cuttom button click.
+
+:: I had succesfully compiled the project after lots of struggle and scratching tons of website but none of them taught me to achive the Install prompt on custom button click. Everyone tells how default mini info bar could be display no one teaches to show the prompt on cuttom button click.
