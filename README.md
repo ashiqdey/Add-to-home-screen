@@ -2,7 +2,7 @@
 Add to Home Screen (install prompt), makes it easy for users to install the PWA on their mobile or desktop device. After the user accepts the prompt, your PWA will be added to their launcher, and it will run like any other installed app.
 
 
-In this project we will be showing a custom button the user to click and add the website/ webapp to the user's home screen.
+In this project I will be showing a custom button the user to click and add the website/ webapp to the user's home screen.
 In order to show the Add to Home Screen dialog, you need to:  
 1. Listen for the beforeinstallprompt event 
 2. Notify the user your app can be installed with a button or other element that will generate a user gesture event. 
